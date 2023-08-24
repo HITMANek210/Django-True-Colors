@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block base_css %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
+
+{% block base_title %}
+    Admin Panel
+{% endblock %}
+
+{% block base_content %}
+<section class="grid">
+    <form id="admin-form" method="POST">
+        <h2>Admin - Backup Manager</h2>
+        {% if message %}<p>{{ message }}</p>{% endif %}
+
+        {% for error in errors %}
+        <p id="error-messages">{{ error }}</p>
+        {% endfor %}
+
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field }}
+        {% endfor %}
+        <button>Create Backup</button>
+
+        <p>If you want to create backup of the database you can do it here.<br> Specify the name of the backup file and click "Create Backup"</p>
+    </form>
+    <script>random_color("admin-form")</script>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block base_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block base_title %}
+    Register
+{% endblock %}
+
+{% block base_content %}
+<section class="grid">
+    <form id="register-form" method="POST">
+        <h2>MyForum</h2>
+        <a href="{% url 'login_page' %}">Already have an account?</a><br>
+        {% for error in errors %}
+        <p id="error-messages">{{ error }}</p>
+        {% endfor %}
+
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field }}<br>
+        {% endfor %}
+        <button>Register</button>
+    </form>
+    <script>random_color("register-form")</script>
+</section>
+{% endblock %}
