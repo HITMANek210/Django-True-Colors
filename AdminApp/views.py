@@ -26,7 +26,7 @@ def admin_panel(request):
     else:
         form = BackupServerForm()
 
-    return render(request, "ForumAdmin/admin.html", {
+    return render(request, "AdminApp/admin.html", {
         "message": message,
         "form": form
     })

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ForumadminConfig(AppConfig):
+class AdminappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'ForumAdmin'
+    name = 'AdminApp'
