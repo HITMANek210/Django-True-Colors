@@ -15,8 +15,8 @@
         <h2>Admin - Backup Manager</h2>
         {% if message %}<p>{{ message }}</p>{% endif %}
 
-        {% for error in errors %}
-        <p id="error-messages">{{ error }}</p>
+        {% for key, val in form.errors.items %}
+        <p id="error-messages">{{ val }}</p>
         {% endfor %}
 
         {% csrf_token %}
