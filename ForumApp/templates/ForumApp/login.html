@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block base_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block base_title %}
+    Login
+{% endblock %}
+
+{% block base_content %}
+<section class="grid">
+    <form id="login-form" method="POST">
+        <h2>MyForum</h2>
+        <a href="{% url 'register_page' %}">Don't have an account?</a><br>
+        {% if login_message %}<p>{{ login_message }}</p>{% endif %}
+        {% for error in errors %}
+        <p id="error-messages">{{ error }}</p>
+        {% endfor %}
+
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field }}<br>
+        {% endfor %}
+        <button>Login</button>
+    </form>
+    <script>random_color("login-form")</script>
+</section>
+{% endblock %}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+html {
+    margin: 0;
+    background-color: black;
+}
+
+.grid {
+    margin-top: 200px;
+    display: grid;
+    place-items: center;
+}
+
+#login-form {
+    font-family: Verdana, Tahoma, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.4);
+}
+
+#login-form h2 {
+    font-family: Dancing Script, Verdana, Tahoma, sans-serif;
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#login-form input {
+    background:#d2d2d2;
+    border: black 2px solid;
+    padding: 8px;
+    width: 250px;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+#login-form button {
+    background:#d2d2d2;
+    border: black 2px solid;
+    padding: 8px;
+    width: 100px;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+#login-form button:hover {
+    background-color: black;
+    color: white;
+}
+
+#register-form {
+    font-family: Verdana, Tahoma, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.4);
+}
+
+#register-form h2 {
+    font-family: Dancing Script, Verdana, Tahoma, sans-serif;
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#register-form input {
+    background:#d2d2d2;
+    border: black 2px solid;
+    padding: 8px;
+    width: 250px;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+#register-form button {
+    background:#d2d2d2;
+    border: black 2px solid;
+    padding: 8px;
+    width: 100px;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+a {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+}
+
+#register-form button:hover {
+    background-color: black;
+    color: white;
+}
+
+#error-messages {
+    color: red;
+}
+	
