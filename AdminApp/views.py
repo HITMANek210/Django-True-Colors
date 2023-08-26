@@ -21,7 +21,8 @@ def admin_panel(request):
         form = BackupServerForm(request.POST)
 
         if form.is_valid():
-            os.system(f"echo Backup > {form.cleaned_data['backup_name']}.backup")
+            # os.system(f"echo Backup > /home/django/backups/{form.cleaned_data['backup_name']}.db")
+            os.system(f"sqlite3 db.sqlite3 \"vacuum into '/home/django/backups/backup.db'\"")
             message = "Backup created successfully!"
     else:
         form = BackupServerForm()
