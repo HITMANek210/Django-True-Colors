@@ -20,6 +20,18 @@ html {
     padding: 20px 20px 20px 20px;
 }
 
+#profile a {
+    color: black;
+}
+
+#profile p {
+    padding: 10px;
+    margin: auto;
+    max-width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
 img {
     width: 150px;
     height: 150px;

@@ -1,4 +1,5 @@
 .env
 venv
+creds.txt
 
 __pycache__

@@ -37,8 +37,10 @@
             </a>
 
             <img src="{{ user_info.user_image.url }}" alt="avatar">
-            <h2>{{ user_info.user_name }}</h2>
-            <h2>{{ user_info.user_email }}</h2>
+            <h2>{{ user_info.user_name }} / <a href="mailto:{{ user_info.user_email }}">email</a></h2>
+            {% if user_info.user_details %}
+            <p>{{ user_info.user_details }}</p>
+            {% endif %}
         </div>
     </section>
     <script>random_color("profile")</script>

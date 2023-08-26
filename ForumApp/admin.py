@@ -9,6 +9,9 @@ class ForumUserChangePassword(forms.ModelForm):
         widgets = {
             "user_password": forms.PasswordInput(attrs={'placeholder': '*************'})
         }
+        help_texts = {
+            "user_password": "If you leave this field empty, it will delete the password completely! <br> I will fix that later."
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
