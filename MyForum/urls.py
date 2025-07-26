@@ -23,4 +23,6 @@ urlpatterns = [
     path('skdfh_bkjbsd_fk111_gjb-admin/', admin.site.urls),
     path('', include("ForumApp.urls")),
     path('admin/', include("AdminApp.urls"))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
