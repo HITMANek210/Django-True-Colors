@@ -26,9 +26,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x&t*rq8h3kh^=g%m46^%qi)&c6ex%*d9_hx_b_41a8*hmr_xs^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('DEBUG')
+DEBUG = os.getenv('DEBUG').lower() in ('true', '1')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
+CSRF_TRUSTED_ORIGINS = [os.getenv('CSRF_TRUSTED_ORIGINS')]
+
+SESSION_COOKIE_AGE = 2629740
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+INTERNAL_IPS = [
+    # '127.0.0.1',
+]
 
 # Application definition
 
